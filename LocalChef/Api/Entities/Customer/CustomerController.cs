@@ -12,6 +12,9 @@ namespace LocalChef.Api.Entities.Customer
     [Route("api/[Controller]")]
     public class CustomerController : Controller {
 
+    public CustomerController() {
+
+    }
         [HttpGet]
         public IEnumerable<string> GetCustomers() {
             // _config["connection_string"]
