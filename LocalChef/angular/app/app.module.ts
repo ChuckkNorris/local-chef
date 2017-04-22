@@ -1,3 +1,7 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { AnimationModule } from '@angular/platform-browser/animations';
+import { browser } from 'protractor';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,6 +16,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { MealCardComponent } from './templates/meal-card/meal-card.component';
+import { LoginFormComponent } from './templates/login-form/login-form.component';
+
+//import { AnimationModule } from "@angular/platform-browser/animations"
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -20,7 +28,9 @@ import { MealCardComponent } from './templates/meal-card/meal-card.component';
     HomePageComponent,
     DashboardPageComponent,
     LoginPageComponent,
-    MealCardComponent
+    MealCardComponent,
+    LoginFormComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -28,7 +38,8 @@ import { MealCardComponent } from './templates/meal-card/meal-card.component';
     HttpModule,
     MaterialModule.forRoot(),
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
